@@ -1,7 +1,7 @@
 {
   "name": "aprofundando-conhecimento-em-hooks",
   "version": "0.1.0",
-  "homepage": "https://samuelrms.github.io/treinando-utiliza-o-de-hooks/",
+  "homepage": "https://samuelrms.github.io/treinando-utilizacao-de-hooks/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
