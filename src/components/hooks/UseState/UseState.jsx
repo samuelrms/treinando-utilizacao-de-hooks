@@ -4,7 +4,7 @@ import { textUseState } from "../../mooks/text";
 import { colors } from "../../styles/colors";
 
 const UseState = () => {
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState(true);
   console.log(textUseState.botoes.ativados[1]);
   return (
     <>
