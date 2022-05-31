@@ -3,12 +3,16 @@ import { colors } from "../../styles/colors";
 import Button from "../Button";
 
 export const ModalUseSate = ({
-  modal,
   setModal,
   titleModal,
   subTitle,
   description,
 }) => {
+  const handleClick = () => {
+    //Função de callback para handle click, ele sempre terá o valor anterior armazenado dentro
+    setModal((ativo) => !ativo);
+  };
+
   return (
     <div>
       <Button
@@ -17,7 +21,7 @@ export const ModalUseSate = ({
         margin="30px 0 0 60px"
         bordeRadius="50%"
         children="X"
-        onClick={() => setModal(modal)}
+        onClick={handleClick}
         background={colors.background.botoes.vermelho}
       />
       <h1>{titleModal}</h1>

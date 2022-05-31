@@ -15,3 +15,18 @@ export const Container = styled.div`
     border: none;
   }
 `;
+
+export const ContentContador = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const ContentButoonsAndValues = styled.div`
+  display: flex;
+  flex-direction: row;
+  div {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+  }
+`;

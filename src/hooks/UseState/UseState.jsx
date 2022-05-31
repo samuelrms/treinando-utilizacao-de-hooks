@@ -3,7 +3,7 @@ import Button from "../../components/Button";
 import { ModalUseSate } from "../../components/Modal";
 import { textUseState } from "../../components/mooks/text";
 import { colors } from "../../styles/colors";
-import { Container } from "./styled";
+import { Container, ContentButoonsAndValues, ContentContador } from "./styled";
 
 const UseState = () => {
   const [active, setActive] = useState(true);
@@ -11,6 +11,8 @@ const UseState = () => {
   const [modal, setModal] = useState(false);
   const [referenceItem, setReferenceItems] = useState(false);
   const [items, setItems] = useState(["Item1 ", "Item2"]);
+  const [contador, setContador] = useState(1);
+  const [screenItems, setScreenItems] = useState(["Item 1"]);
 
   const handleClick = () => {
     setActive(!active);
@@ -30,6 +32,21 @@ const UseState = () => {
   const handleClickItems = () => {
     setItems(["New Item"]);
     setReferenceItems(!referenceItem);
+  };
+
+  const handleClickContador = () => {
+    setContador((contador) => contador + 1);
+    setScreenItems((screenItems) => [...screenItems, "Item " + (contador + 1)]);
+  };
+
+  const handleClickContadorSubtracao = () => {
+    setContador((contador) => contador - 1);
+    setScreenItems((screenItems) => [...screenItems, "Item " + (contador - 1)]);
+  };
+
+  const clearValueContador = () => {
+    setScreenItems([]);
+    setContador(0);
   };
 
   const dataInversion = {
@@ -133,8 +150,45 @@ const UseState = () => {
           background={backgroundInversion.disabledopeningSentence}
           cursor={!referenceItem ? "pointer" : ""}
         />
-        <h2> {items}</h2>
+        <h3> {items}</h3>
       </div>
+      <hr />
+      <ContentContador>
+        <h2>
+          useState (number) utilizado para atualizar um contador com função de
+          callback
+        </h2>
+        <ContentButoonsAndValues>
+          <div>
+            <Button
+              margin="0"
+              height="50px"
+              width="50%"
+              children="Zerar contador"
+              onClick={clearValueContador}
+            />
+            <Button
+              margin="10px 0 0"
+              width="50%"
+              height="50px"
+              children="+"
+              onClick={handleClickContador}
+            />
+            <Button
+              margin="10px 0 0"
+              width="50%"
+              height="50px"
+              children="-"
+              onClick={handleClickContadorSubtracao}
+            />
+          </div>
+          <div>
+            {screenItems.map((screenItems) => (
+              <li key={screenItems}>{screenItems}</li>
+            ))}
+          </div>
+        </ContentButoonsAndValues>
+      </ContentContador>
     </Container>
   );
 };
