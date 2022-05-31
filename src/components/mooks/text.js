@@ -1,6 +1,6 @@
 export const textUseState = {
   botoes: {
-    ativados: ["Ativado", "Clique no outro botão para ativar"],
-    desativados: ["Desativado", "Clique no outro botão para desativar"],
+    ativados: ["Ativado", "Clique no  botão desativado para ativar"],
+    desativados: ["Desativado", "Clique no botão *ativado* para desativar"],
   },
 };
