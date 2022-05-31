@@ -11,6 +11,7 @@ export const colors = {
       preto: "#1d1d1d",
       branco: "#fff",
       vermelho: "#e35",
+      verde: "#25A830",
     },
   },
 };
