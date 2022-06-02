@@ -13,6 +13,7 @@ const ScreenRoutes = () => {
       <GlobalStyle />
       <Header />
       <Routes>
+        <Route path="/treinando-utilizacao-de-hooks/" element={<Home />} />
         <Route path="/" element={<Home />} />
         <Route path="/usestate" element={<UseState />} />
         <Route path="/requestapiusestate" element={<RequestAPIUseState />} />
