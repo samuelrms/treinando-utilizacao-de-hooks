@@ -14,4 +14,10 @@ export const colors = {
       verde: "#25A830",
     },
   },
+  text: {
+    colors: {
+      primary: "#1d1d1d",
+      secondary: "#6c6c6c",
+    },
+  },
 };

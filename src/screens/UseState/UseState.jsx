@@ -173,6 +173,8 @@ const UseState = () => {
               height="50px"
               children="+"
               onClick={handleClickContador}
+              disabled={contador >= 5}
+              cursor={contador <= 5 ? "pointer" : ""}
             />
             <Button
               margin="10px 0 0"
@@ -180,6 +182,8 @@ const UseState = () => {
               height="50px"
               children="-"
               onClick={handleClickContadorSubtracao}
+              disabled={contador <= 0}
+              cursor={contador <= 0 ? "" : "pointer"}
             />
           </div>
           <div>

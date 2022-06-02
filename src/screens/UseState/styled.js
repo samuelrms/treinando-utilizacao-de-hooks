@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background: #a9b9c9;
+  background: grey;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 80%;
   margin: 0 auto;
+  padding: 0 20px 20px;
 
   hr {
     height: 5px;
@@ -19,6 +19,12 @@ export const Container = styled.div`
 export const ContentContador = styled.div`
   display: flex;
   flex-direction: column;
+  :last-child {
+    div {
+      padding-bottom: 30px;
+      flex-wrap: wrap;
+    }
+  }
 `;
 
 export const ContentButoonsAndValues = styled.div`

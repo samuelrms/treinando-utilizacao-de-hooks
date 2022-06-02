@@ -1,13 +1,11 @@
 import React from "react";
-import UseState from "./hooks/UseState";
-import { GlobalStyle } from "./styles/GlobalStyle";
+import ScreenRoutes from "./Routes/ScreenRoutes";
 
 const App = () => {
   return (
-    <div>
-      <GlobalStyle />
-      <UseState />
-    </div>
+    <>
+      <ScreenRoutes />
+    </>
   );
 };
 
