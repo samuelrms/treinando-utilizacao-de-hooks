@@ -7,6 +7,7 @@ export const RequestContainer = styled.div`
   display: flex;
   flex-direction: column;
   height: 650px;
+  padding-top: 30px;
 `;
 
 export const ButtonsContainer = styled.div`

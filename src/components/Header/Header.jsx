@@ -10,6 +10,10 @@ const Header = () => {
       <Link to="/treinando-utilizacao-de-hooks/requestapiusestate">
         Request API useState
       </Link>
+      <Link to="/treinando-utilizacao-de-hooks/useeffect">useEffect</Link>
+      <Link to="/treinando-utilizacao-de-hooks/usememo">useMemo</Link>
+      <Link to="/treinando-utilizacao-de-hooks/usecontext">useContext</Link>
+      <Link to="/treinando-utilizacao-de-hooks/usecallback">useCallback</Link>
     </HeaderContainer>
   );
 };
