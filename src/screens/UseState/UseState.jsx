@@ -174,7 +174,7 @@ const UseState = () => {
               children="+"
               onClick={handleClickContador}
               disabled={contador >= 5}
-              cursor={contador <= 5 ? "pointer" : ""}
+              cursor={contador < 5 ? "pointer" : ""}
             />
             <Button
               margin="10px 0 0"
