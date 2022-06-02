@@ -13,10 +13,16 @@ const ScreenRoutes = () => {
       <GlobalStyle />
       <Header />
       <Routes>
-        <Route path="/treinando-utilizacao-de-hooks/" element={<Home />} />
+        <Route path="/treinando-utilizacao-de-hooks" element={<Home />} />
         <Route path="/" element={<Home />} />
-        <Route path="/usestate" element={<UseState />} />
-        <Route path="/requestapiusestate" element={<RequestAPIUseState />} />
+        <Route
+          path="/treinando-utilizacao-de-hooks/usestate"
+          element={<UseState />}
+        />
+        <Route
+          path="/treinando-utilizacao-de-hooks/requestapiusestate"
+          element={<RequestAPIUseState />}
+        />
       </Routes>
       <Footer />
     </BrowserRouter>

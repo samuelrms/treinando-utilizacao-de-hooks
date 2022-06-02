@@ -5,9 +5,11 @@ import { HeaderContainer } from "./styled";
 const Header = () => {
   return (
     <HeaderContainer>
-      <Link to="/">Home</Link>
-      <Link to="/usestate">useState</Link>
-      <Link to="/requestapiusestate">Request API useState</Link>
+      <Link to="/treinando-utilizacao-de-hooks">Home</Link>
+      <Link to="/treinando-utilizacao-de-hooks/usestate">useState</Link>
+      <Link to="/treinando-utilizacao-de-hooks/requestapiusestate">
+        Request API useState
+      </Link>
     </HeaderContainer>
   );
 };
