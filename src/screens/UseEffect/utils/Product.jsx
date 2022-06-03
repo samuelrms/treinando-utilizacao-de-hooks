@@ -47,12 +47,14 @@ const Product = () => {
           height="50px"
           margin="0 0 20px 0"
           children="Notebook"
+          widthTablet="100%"
         />
         <Button
           onClick={handleClick}
           height="50px"
           width="60%"
           children="SmartPhone"
+          widthTablet="100%"
         />
       </ProductButtonContent>
       <GetProduct items={product} />

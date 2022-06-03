@@ -68,66 +68,76 @@ const UseEffect = () => {
                 <p>Produtos no carrinho {contador}</p>
                 <p>Maximo de produtos por compra 10</p>
               </div>
+              <ContentButtons>
+                <Button
+                  onClick={handleClick}
+                  height="40px"
+                  margin="40px auto"
+                  width="25%"
+                  disabled={contador > 9}
+                  cursor={contador > 9 ? "" : "pointer"}
+                  children="Adicionar produtos"
+                />
+                <Button
+                  onClick={handleClickReduce}
+                  height="40px"
+                  margin="40px auto"
+                  width="25%"
+                  disabled={contador < 1}
+                  cursor={contador > 0 ? "pointer" : ""}
+                  children="Reduzir produtos"
+                />
+                <Button
+                  onClick={handleClickClear}
+                  height="40px"
+                  margin="40px auto"
+                  width="25%"
+                  disabled={contador === 0}
+                  cursor={contador === 0 ? "" : "pointer"}
+                  children="Limpar carrinho"
+                  background="#e35"
+                />
+              </ContentButtons>
               <div>
                 {data.fotos.map((data, index) => (
                   <img key={index} src={data.src} alt={data.titulo} />
                 ))}
               </div>
             </ContentProdutos>
-
-            <ContentButtons>
-              <Button
-                onClick={handleClick}
-                height="40px"
-                margin="40px auto"
-                width="25%"
-                disabled={contador > 9}
-                cursor={contador > 9 ? "" : "pointer"}
-                children="Adicionar produtos"
-              />
-              <Button
-                onClick={handleClickReduce}
-                height="40px"
-                margin="40px auto"
-                width="25%"
-                disabled={contador < 1}
-                cursor={contador > 0 ? "pointer" : ""}
-                children="Reduzir produtos"
-              />
-              <Button
-                onClick={handleClickClear}
-                height="40px"
-                margin="40px auto"
-                width="25%"
-                disabled={contador === 0}
-                cursor={contador === 0 ? "" : "pointer"}
-                children="Limpar carrinho"
-                background="#e35"
-              />
-            </ContentButtons>
           </>
         )}
       </ContentBuy>
       <RenderPreference>
         {!active && (
           <ButtonPreference
-            onClick={() => setActive(!active)}
-            height="40px"
-            width="20%"
-            bordeRadius="10px"
-            children="Mostrar preferencias ↓"
             background={colors.background.botoes.verde}
+            onClick={() => setActive(!active)}
+            bordeRadius="10px"
+            width="20%"
+            height="40px"
+            children="Mostrar preferencias ↓"
+            widthTablet="100%"
+            position="absolute"
+            right="30px"
+            top="10px"
+            leftTablet="0"
+            topTablet="40px"
           />
         )}
         {active && (
           <>
             <ButtonPreference
-              onClick={() => setActive(!active)}
-              height="40px"
-              width="40px"
-              children="X"
-              bordeRadius="50%"
               background={colors.background.botoes.vermelho}
+              onClick={() => setActive(!active)}
+              bordeRadius="50%"
+              width="30px"
+              height="30px"
+              children="X"
+              position="absolute"
+              right="30px"
+              top="10px"
+              rightTablet="0px"
+              topTablet="10px"
             />
             <Product />
           </>

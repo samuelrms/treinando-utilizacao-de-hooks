@@ -9,5 +9,10 @@ export const GlobalStyle = createGlobalStyle`
       text-decoration: none;
       color: #1d1d1d;
     }
+    @media (max-width: 768px){
+     #root{ display: flex;
+      flex-direction: row;
+      width: 100%;}
+    }
 }
 `;

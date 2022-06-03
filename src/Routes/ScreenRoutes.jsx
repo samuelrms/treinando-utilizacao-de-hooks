@@ -42,7 +42,7 @@ const ScreenRoutes = () => {
           path="/treinando-utilizacao-de-hooks/usecallback"
           element={<Constructor />}
         />
-        <Route path="*" element={<Error />} />
+        <Route path="/treinando-utilizacao-de-hooks/*" element={<Error />} />
       </Routes>
       <Footer />
     </BrowserRouter>

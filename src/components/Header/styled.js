@@ -13,4 +13,18 @@ export const HeaderContainer = styled.header`
       background: grey;
     }
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 20%;
+    padding: 10px 5px 10px 10px;
+    justify-content: flex-start;
+  }
+
+  @media (max-width: 425px) {
+    width: 30%;
+  }
+  /* @media (max-width: 525px) {
+    width: 25%;
+  } */
 `;

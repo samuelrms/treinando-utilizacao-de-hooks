@@ -4,7 +4,9 @@ import { ContainerContructor } from "./styled";
 const Constructor = () => {
   return (
     <ContainerContructor>
-      <h1>🚧👷👷🚧 Página em construção 🚧👷👷🚧</h1>
+      <div>
+        <p>🚧👷🚧</p> <h1>Página em construção</h1> <p>🚧👷🚧</p>
+      </div>
     </ContainerContructor>
   );
 };

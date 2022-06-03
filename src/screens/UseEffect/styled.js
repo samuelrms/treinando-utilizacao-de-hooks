@@ -7,6 +7,7 @@ export const ContainerUseEffect = styled.div`
   background: grey;
   margin: 0 auto;
   min-height: 600px;
+  padding: 0 15px;
 `;
 
 export const ContentBuy = styled.div`
@@ -16,6 +17,18 @@ export const ContentBuy = styled.div`
 export const ContentButtons = styled.div`
   display: flex;
   flex-direction: row;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    button {
+      width: 55%;
+      height: 50px;
+      margin: 20px auto 0;
+      :first-child {
+        margin: 40px auto 0;
+      }
+    }
+  }
 `;
 
 export const ContentProdutos = styled.div`
@@ -33,41 +46,59 @@ export const ContentProdutos = styled.div`
       margin-left: 30px;
     }
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    img {
+      :last-child {
+        margin-left: 0;
+      }
+    }
+  }
 `;
 
 export const ProductContainer = styled.div`
-  width: 100%;
+  width: 90%;
   height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+    width: 100%;
+  }
 `;
 
 export const ContentDescription = styled.div`
   display: flex;
   flex-direction: column;
   width: 50%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const ProductButtonContent = styled.div`
   display: flex;
   width: 50%;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    margin: 0 auto;
+  }
 `;
 
 export const RenderPreference = styled.div`
   display: flex;
   position: relative;
-  padding-bottom: 100px;
+  padding-bottom: 250px;
 `;
 
-export const ButtonPreference = styled(Button)`
-  position: absolute;
-  right: 30px;
-  top: 10px;
-`;
+export const ButtonPreference = styled(Button)``;
 
 export const GetProductContainer = styled.div`
   display: flex;
@@ -83,4 +114,16 @@ export const GetProductContainer = styled.div`
     border-radius: 10px;
     margin-left: 40px;
   }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+    margin: 0 auto;
+    img {
+      margin-left: 0;
+    }
+    h2 {
+      margin-top: 20px;
+    }
+  } ;
 `;

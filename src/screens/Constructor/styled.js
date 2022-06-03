@@ -1,18 +1,21 @@
 import styled from "styled-components";
 
 export const ContainerContructor = styled.div`
-  width: 100%;
-  height: 100vh;
   display: flex;
-  /* align-items: center;
-  justify-content: center; */
-  h1 {
-    margin: auto;
-    background: #000;
-    color: #fff;
-    padding: 30px;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+  padding: 0 0 100px;
+  div {
+    background-color: #000;
+    display: flex;
+    align-items: center;
     border-radius: 10px;
-    height: 10%;
+    margin: 0 20px;
+    h1 {
+      color: #fff;
+      text-align: center;
+    }
   }
 
   animation: renderConstructor 0.5s ease;

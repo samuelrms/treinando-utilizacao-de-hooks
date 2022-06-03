@@ -11,6 +11,10 @@ const Button = ({
   bordeRadius,
   border,
   cursor,
+  widthTablet,
+  heightTablet,
+  marginTablet,
+  paddingTablet,
   ...restProps
 }) => {
   return (
@@ -23,6 +27,10 @@ const Button = ({
       bordeRadius={bordeRadius}
       border={border}
       cursor={cursor}
+      widthTablet={widthTablet}
+      heightTablet={heightTablet}
+      marginTablet={marginTablet}
+      paddingTablet={paddingTablet}
       {...restProps}
     >
       {children}

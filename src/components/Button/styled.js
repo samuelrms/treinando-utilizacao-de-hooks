@@ -10,6 +10,23 @@ export const ButtonDefault = styled.button`
   cursor: ${({ cursor }) => cursor};
   padding: ${({ padding }) => padding};
   margin: ${({ margin }) => margin};
+  position: ${({ position }) => position};
+  top: ${({ top }) => top};
+  left: ${({ left }) => left};
+  right: ${({ right }) => right};
+  bottom: ${({ bottom }) => bottom};
+
+  @media (max-width: 768px) {
+    width: ${({ widthTablet }) => widthTablet};
+    height: ${({ heightTablet }) => heightTablet};
+    margin: ${({ marginTablet }) => marginTablet};
+    padding: ${({ paddingTablet }) => paddingTablet};
+    position: ${({ positionTablet }) => positionTablet};
+    top: ${({ topTablet }) => topTablet};
+    left: ${({ leftTablet }) => leftTablet};
+    right: ${({ rightTablet }) => rightTablet};
+    bottom: ${({ bottomTablet }) => bottomTablet};
+  }
 `;
 
 ButtonDefault.defaultProps = {

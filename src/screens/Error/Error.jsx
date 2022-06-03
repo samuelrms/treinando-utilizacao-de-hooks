@@ -4,7 +4,11 @@ import { ContainerError } from "./styled";
 const Error = () => {
   return (
     <ContainerError>
-      <h1>🚫🛑🚫 Ocorreu um erro, você não deveria estar aqui... 🚫🛑🚫</h1>
+      <div>
+        <p> 🚫🛑🚫</p>
+        <h1>Ocorreu um erro, você não deveria estar aqui...</h1>
+        <p> 🚫🛑🚫</p>
+      </div>
     </ContainerError>
   );
 };
