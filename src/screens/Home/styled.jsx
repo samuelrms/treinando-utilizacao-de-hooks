@@ -5,16 +5,21 @@ export const ContainerHome = styled.div`
   background: grey;
   height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
   margin: 0 auto;
+  flex-direction: column;
   h1 {
-    cursor: none;
-    padding: 20px;
-    :hover {
-      color: #fff;
-      background: #000;
-      border-radius: 10px;
-    }
+    margin: 20px 0 10px;
+  }
+  h2 {
+    margin: 10px 0 10px;
+    text-align: center;
+  }
+  hr {
+    width: 100%;
+  }
+  p {
+    margin: 0 20px;
+    font-size: 20px;
   }
 `;

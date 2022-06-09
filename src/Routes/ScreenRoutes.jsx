@@ -7,6 +7,7 @@ import Error from "../screens/Error";
 import Home from "../screens/Home";
 import RequestAPIUseState from "../screens/RequestAPIUseState";
 import UseEffect from "../screens/UseEffect";
+import UseMemo from "../screens/UseMemo";
 import UseRef from "../screens/UseRef";
 import UseState from "../screens/UseState";
 import { GlobalStyle } from "../styles/GlobalStyle";
@@ -33,7 +34,7 @@ const ScreenRoutes = () => {
         />
         <Route
           path="/treinando-utilizacao-de-hooks/usememo"
-          element={<Constructor />}
+          element={<UseMemo />}
         />
         <Route
           path="/treinando-utilizacao-de-hooks/usecontext"

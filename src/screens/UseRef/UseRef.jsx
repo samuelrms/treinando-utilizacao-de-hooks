@@ -12,12 +12,7 @@ const UseRef = () => {
 
   //----------------------------------------------
 
-  const [comments, setComments] = useState([
-    "teste 1",
-    "teste 2",
-    "teste 3",
-    "teste 4",
-  ]);
+  const [comments, setComments] = useState([]);
   const [input, setInput] = useState("");
   const inputElement = useRef();
 
@@ -25,6 +20,14 @@ const UseRef = () => {
     setComments([...comments, input]);
     setInput("");
     inputElement.current.focus();
+  };
+
+  const handleClickClearComment = () => {
+    const contentCard = {
+      value: input,
+      key: Math.random() * 10,
+    };
+    setComments((contentCards) => [...contentCards, contentCard]);
   };
 
   // ---------------------------------------------------------
@@ -41,7 +44,7 @@ const UseRef = () => {
     timeoutRef.current = setTimeout(() => {
       // sempre chamar o current para essas situações
       setNotification(null);
-    }, 1000);
+    }, 1500);
   };
 
   return (
@@ -53,20 +56,22 @@ const UseRef = () => {
           value={input}
           onChange={({ target }) => setInput(target.value)} // defina o input como o value dele
         />
-        <ul>
-          {comments.map((comment, index) => (
-            <li key={index}>{comment}</li>
-          ))}
-        </ul>
         <Button
           onClick={handleClick}
           children="Submit"
-          width="50%"
+          width="60px"
           height="40px"
-          margin="0 0 30px 0"
+          margin="30px 0 30px 30px"
           disabled={input === ""} // se o input for vazio o botão é desabilitado
           cursor={input === "" ? "" : "pointer"} // se o input for vazio o cursor do botão não fica mais como pointer
         />
+        <ul>
+          {comments.map((comment, index) => (
+            <>
+              <li key={index}>{comment}</li>
+            </>
+          ))}
+        </ul>
       </div>
       <hr />
       <div>
