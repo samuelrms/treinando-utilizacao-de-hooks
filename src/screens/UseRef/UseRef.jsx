@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Button from "../../components/Button";
 
-const UseRef = () => {
+  // const UseRef = () => {
   // const video = useRef();
   // useEffect(() => {
   //   video.current = "teste";
