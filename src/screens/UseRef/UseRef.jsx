@@ -22,13 +22,13 @@ import Button from "../../components/Button";
     inputElement.current.focus();
   };
 
-  const handleClickClearComment = () => {
-    const contentCard = {
-      value: input,
-      key: Math.random() * 10,
-    };
-    setComments((contentCards) => [...contentCards, contentCard]);
-  };
+//   const handleClickClearComment = () => {
+//     const contentCard = {
+//       value: input,
+//       key: Math.random() * 10,
+//     };
+//     setComments((contentCards) => [...contentCards, contentCard]);
+//   };
 
   // ---------------------------------------------------------
 
