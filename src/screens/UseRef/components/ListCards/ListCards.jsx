@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Button from "../../../../components/Button";
 import {
   Comment,
@@ -13,7 +13,6 @@ const ListCards = () => {
   const [comments, setComments] = useState([]);
   const [input, setInput] = useState("");
   const inputElement = useRef();
-  // const indexValue = Math.random() * 10;
 
   const handleClickAddComments = () => {
     const mountComments = {
@@ -24,6 +23,15 @@ const ListCards = () => {
     setInput("");
     inputElement.current.focus();
   };
+
+  useEffect(() => {
+    comments !== null &&
+      window.localStorage.setItem(
+        "Card",
+        comments.map((comment) => comment.value),
+      );
+    console.log(comments.map((comment) => comment.value));
+  }, [comments]);
 
   const handleClickClearComment = (index) => {
     const contentCardClear = comments.filter(
