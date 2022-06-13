@@ -24,14 +24,19 @@ const ListCards = () => {
     inputElement.current.focus();
   };
 
-  useEffect(() => {
-    comments !== null &&
-      window.localStorage.setItem(
-        "Card",
-        comments.map((comment) => comment.value),
-      );
-    console.log(comments.map((comment) => comment.value));
-  }, [comments]);
+  // useEffect(() => {
+  //   const commentsToString = JSON.stringify(comments);
+  //   comments !== null &&
+  //     // window.localStorage.setItem("Card", JSON.stringify(comments));
+  //     window.localStorage.setItem("Card", commentsToString);
+  // }, [comments]);
+
+  // useEffect(() => {
+  //   const localComments = JSON.parse(window.localStorage.getItem("Card"));
+  //   const commentsRender = (comments !== null || comments !== undefined) && "";
+  //   setComments(localComments);
+  //   console.log(commentsRender);
+  // }, []);
 
   const handleClickClearComment = (index) => {
     const contentCardClear = comments.filter(
@@ -44,6 +49,9 @@ const ListCards = () => {
     event.key === "Enter" &&
       input !== "" &&
       input !== " " &&
+      input !== "  " &&
+      input !== "   " &&
+      input !== "    " &&
       handleClickAddComments();
   };
 

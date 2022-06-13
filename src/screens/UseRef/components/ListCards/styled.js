@@ -19,8 +19,10 @@ export const InputCard = styled.input`
   margin: 0 auto;
   font-size: 24px;
   border: none;
+  padding-left: 30px;
   :focus {
-    border: none;
+    box-shadow: 0 0 0 0;
+    outline: 0;
   }
 `;
 

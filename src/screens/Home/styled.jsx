@@ -12,7 +12,6 @@ export const ContainerHome = styled.div`
     margin: 20px 0 10px;
   }
   h2 {
-    margin: 10px 0 10px;
     text-align: center;
   }
   hr {
@@ -21,5 +20,18 @@ export const ContainerHome = styled.div`
   p {
     margin: 0 20px;
     font-size: 20px;
+  }
+`;
+
+export const ContentUseState = styled.div`
+  background: #1d1d1d;
+  color: #f6f6f6;
+  padding: 30px;
+  width: 90%;
+  border-radius: 10px;
+  a {
+    padding: 10px 10px 10px 8px;
+    width: 100%;
+    margin: auto;
   }
 `;
