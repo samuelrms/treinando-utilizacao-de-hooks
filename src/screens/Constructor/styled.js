@@ -16,7 +16,6 @@ export const ContainerContructor = styled.div`
     display: flex;
     align-items: center;
     border-radius: 10px;
-    /* margin: 0 20px; */
     h1 {
       color: #fff;
       text-align: center;
