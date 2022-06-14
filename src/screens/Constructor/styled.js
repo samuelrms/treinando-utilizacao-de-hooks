@@ -1,17 +1,22 @@
 import styled from "styled-components";
 
 export const ContainerContructor = styled.div`
+  margin: 65px auto 30px;
+  backdrop-filter: blur(15px);
+  background: rgba(39, 1, 64, 0.57);
+  border-radius: 10px;
+  width: 90%;
+  height: 100vh;
+  padding: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 600px;
-  padding: 0 0 100px;
   div {
     background-color: #000;
     display: flex;
     align-items: center;
     border-radius: 10px;
-    margin: 0 20px;
+    /* margin: 0 20px; */
     h1 {
       color: #fff;
       text-align: center;

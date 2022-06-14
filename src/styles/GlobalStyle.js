@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   body {
-    background: #A8A8A8;
+    background: linear-gradient(to left top, #D9042B, #270140, #F2B705, #F28705, #F22F1D);
     box-sizing: border-box;
     margin: 0;
     a{

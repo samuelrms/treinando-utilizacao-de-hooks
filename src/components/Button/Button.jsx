@@ -15,6 +15,8 @@ const Button = ({
   heightTablet,
   marginTablet,
   paddingTablet,
+  boxShadow,
+  hoverBackground,
   ...restProps
 }) => {
   return (
@@ -31,6 +33,8 @@ const Button = ({
       heightTablet={heightTablet}
       marginTablet={marginTablet}
       paddingTablet={paddingTablet}
+      boxShadow={boxShadow}
+      hoverBackground={hoverBackground}
       {...restProps}
     >
       {children}

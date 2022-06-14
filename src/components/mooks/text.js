@@ -31,3 +31,18 @@ export const textHome = {
     },
   },
 };
+
+export const textUseRef = {
+  title: {},
+  description: {},
+  subTitle: {},
+  content: {
+    descriptionTodo: {
+      title: "TodoCard",
+      subTitle:
+        "Feito com React Hooks, os Hooks utilizados foram useEffect, useRef e useState.",
+      description:
+        "Nesse exmplo todas as tarefas são salvas localmente utilizando localStorage, podemos apagar cada card e uma vez apagado ele também será retirado do armazenamento local.",
+    },
+  },
+};

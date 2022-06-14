@@ -15,6 +15,12 @@ export const ButtonDefault = styled.button`
   left: ${({ left }) => left};
   right: ${({ right }) => right};
   bottom: ${({ bottom }) => bottom};
+  box-shadow: ${({ boxShadow }) => boxShadow};
+  display: ${({ display }) => display};
+
+  :hover {
+    background: ${({ hoverBackground }) => hoverBackground};
+  }
 
   @media (max-width: 768px) {
     width: ${({ widthTablet }) => widthTablet};

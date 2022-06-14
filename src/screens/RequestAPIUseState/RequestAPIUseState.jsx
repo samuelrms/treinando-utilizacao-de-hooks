@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "../../components/Button";
+import SubTitle from "../../components/SubTitle/SubTitle";
 import Product from "./Product";
 import { ButtonsContainer, RequestContainer } from "./styled";
 
@@ -26,23 +27,28 @@ const RequestAPIUseState = () => {
         <Button
           onClick={handleClick}
           children="Notebook"
-          width="25%"
+          width="90px"
           height="40px"
+          margin="0 30px 0 0"
+          background="#270140"
         />
         <Button
           onClick={handleClick}
           height="40px"
           children="SmartPhone"
-          width="25%"
+          width="90px"
+          background="#270140"
         />
         <Button
           onClick={handleClick}
           children="Tablet"
-          width="25%"
+          width="90px"
           height="40px"
+          margin="0 0 0 30px"
+          background="#270140"
         />
       </ButtonsContainer>
-      {loading && <h2>Loading...</h2>}
+      {loading && <SubTitle color="#fff">Loading...</SubTitle>}
       {!loading && data && <Product data={data} />}
     </RequestContainer>
   );

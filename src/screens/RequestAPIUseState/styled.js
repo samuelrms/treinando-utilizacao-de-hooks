@@ -3,12 +3,15 @@ import styled from "styled-components";
 export const RequestContainer = styled.div`
   background: grey;
   width: 90%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   height: 650px;
   padding-top: 30px;
   align-items: center;
+  margin: 65px auto 30px;
+  backdrop-filter: blur(15px);
+  background: rgba(39, 1, 64, 0.57);
+  border-radius: 10px;
 
   @media (max-width: 768px) {
     padding: 0 15px;
