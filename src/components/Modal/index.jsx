@@ -1,6 +1,9 @@
 import React from "react";
 import { colors } from "../../styles/colors";
 import Button from "../Button";
+import Description from "../Description/Description";
+import SubTitle from "../SubTitle/SubTitle";
+import Title from "../Title/Title";
 
 export const ModalUseSate = ({
   setModal,
@@ -23,10 +26,11 @@ export const ModalUseSate = ({
         children="X"
         onClick={handleClick}
         background={colors.background.botoes.vermelho}
+        hoverBackground="linear-gradient(135deg, #d9042b, #f2b705, #f28705, #f22f1d)"
       />
-      <h1>{titleModal}</h1>
-      <h2>{subTitle}</h2>
-      <h3>{description}</h3>
+      <Title color="#fff">{titleModal}</Title>
+      <SubTitle color="#fff">{subTitle}</SubTitle>
+      <Description color="#fff">{description}</Description>
     </div>
   );
 };

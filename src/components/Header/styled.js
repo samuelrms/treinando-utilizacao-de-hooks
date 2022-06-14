@@ -4,13 +4,17 @@ export const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-evenly;
   padding: 10px;
-  background: #000;
+  background: #270140;
+  position: fixed;
+  width: 100%;
+  margin-top: -65px;
+  z-index: 99;
   a {
     color: #fff;
     padding: 10px;
     border-radius: 10px;
     :hover {
-      background: grey;
+      background: linear-gradient(135deg, #d9042b, #f2b705, #f28705, #f22f1d);
     }
   }
 

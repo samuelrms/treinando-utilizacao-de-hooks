@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import Button from "../../components/Button";
+import Description from "../../components/Description/Description";
 import { ModalUseSate } from "../../components/Modal";
 import { textUseState } from "../../components/mooks/text";
+import SubTitle from "../../components/SubTitle/SubTitle";
+import Text from "../../components/Text/Text";
+import Title from "../../components/Title/Title";
 import { colors } from "../../styles/colors";
 import { Container, ContentButoonsAndValues, ContentContador } from "./styled";
 
@@ -10,7 +14,7 @@ const UseState = () => {
   const [userData, setUserData] = useState({ name: "Samuel Ramos", age: "22" });
   const [modal, setModal] = useState(false);
   const [referenceItem, setReferenceItems] = useState(false);
-  const [items, setItems] = useState(["Item1 ", "Item2"]);
+  const [items, setItems] = useState(["Teste de item 1 ", "Teste de item 2"]);
   const [contador, setContador] = useState(1);
   const [screenItems, setScreenItems] = useState(["Item 1"]);
 
@@ -30,7 +34,7 @@ const UseState = () => {
 
   // Maneira correta de se modificar os estado
   const handleClickItems = () => {
-    setItems(["New Item"]);
+    setItems(["Novo item"]);
     setReferenceItems(!referenceItem);
   };
 
@@ -78,39 +82,41 @@ const UseState = () => {
 
   return (
     <Container>
-      <h1>{textUseState.titulo.titulo}</h1>
+      <Title color="#fff">{textUseState.titulo.titulo}</Title>
       <hr />
       <div>
-        <h2>
-          useState (boolean) para alterar estado e propriedades de outro objeto{" "}
-        </h2>
+        <SubTitle color="#fff">
+          useState (boolean) para alterar estado e propriedades de outro objeto
+        </SubTitle>
         <Button
           width="100px"
           height="50px"
           children={dataInversion.activeToDeactivated}
           onClick={handleClick}
+          background="#270140"
         />
-        <p>
+        <Text color="#fff">
           useState vinculadando dois botões tornando um reativo ao outro, onde o
           botão preto altera do estado do botão de baixo trocando sua frase, sua
           cor e desabilitando o mesmo
-        </p>
+        </Text>
         <Button
           disabled={active}
           width="100%"
           height="50px"
           margin="0 0 40px 0"
           background={backgroundInversion.activeToDeactivated}
-          cursor={active ? "pointer" : ""}
+          hoverBackground="linear-gradient(135deg, #d9042b, #f2b705, #f28705, #f22f1d)"
+          cursor=""
           children={dataInversion.deactivatedToActive}
         />
       </div>
       <hr />
       <div>
-        <h2>
+        <SubTitle color="#fff">
           useState (boolean) vinculado a uma renderização de condição para poder
           mostrar algo como um "Modal" na tela
-        </h2>
+        </SubTitle>
         <Button
           width="60%"
           height="50px"
@@ -118,12 +124,14 @@ const UseState = () => {
           children={dataInversion.modalState}
           onClick={handleClickModal}
           background={backgroundInversion.activeToDeactivatedModal}
+          hoverBackground="linear-gradient(135deg, #d9042b, #f2b705, #f28705, #f22f1d)"
+          display={!modal ? "" : "none"}
         />
-        <p>
+        <Text color="#fff">
           useState usado como um estado para abrir um modal com uma renderização
           de condição, a mesma pode ser fechada clicando em seus botões quando
           eles estão vermelhos.
-        </p>
+        </Text>
         {modal && (
           <ModalUseSate
             setModal={setModal}
@@ -135,12 +143,14 @@ const UseState = () => {
       </div>
       <hr />
       <div>
-        <h2>useState (objeto && boolean) utilizado para alterar frase</h2>
-        <p>
+        <SubTitle color="#fff">
+          useState (objeto && boolean) utilizado para alterar frase
+        </SubTitle>
+        <Text color="#fff">
           useState utilizado para alterar frase e condicionado a um valor
           verdadeiro para uma vez que a frase for trocada o botão não ser mais
           clicavel
-        </p>
+        </Text>
         <Button
           margin="0"
           height="50px"
@@ -150,14 +160,14 @@ const UseState = () => {
           background={backgroundInversion.disabledopeningSentence}
           cursor={!referenceItem ? "pointer" : ""}
         />
-        <h3> {items}</h3>
+        <Description color="#fff"> {items}</Description>
       </div>
       <hr />
       <ContentContador>
-        <h2>
+        <SubTitle color="#fff">
           useState (number) utilizado para atualizar um contador com função de
           callback
-        </h2>
+        </SubTitle>
         <ContentButoonsAndValues>
           <div>
             <Button
@@ -166,6 +176,7 @@ const UseState = () => {
               width="50%"
               children="Zerar contador"
               onClick={clearValueContador}
+              background="#270140"
             />
             <Button
               margin="10px 0 0"
@@ -175,6 +186,7 @@ const UseState = () => {
               onClick={handleClickContador}
               disabled={contador >= 5}
               cursor={contador < 5 ? "pointer" : ""}
+              background="#270140"
             />
             <Button
               margin="10px 0 0"
@@ -184,6 +196,7 @@ const UseState = () => {
               onClick={handleClickContadorSubtracao}
               disabled={contador <= 0}
               cursor={contador <= 0 ? "" : "pointer"}
+              background="#270140"
             />
           </div>
           <div>

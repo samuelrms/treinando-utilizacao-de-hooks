@@ -10,9 +10,11 @@ import { ContainerHome, ContentUseState } from "./styled";
 const Home = () => {
   return (
     <ContainerHome>
-      <Title>{textHome.title.title}</Title>
-      <Text>{textHome.title.description}</Text>
-      <SubTitle margin="10px 0">{textHome.title.subTitle}</SubTitle>
+      <Title color="#fff">{textHome.title.title}</Title>
+      <Text color="#fff">{textHome.title.description}</Text>
+      <SubTitle color="#fff" margin="10px 0">
+        {textHome.title.subTitle}
+      </SubTitle>
       <hr />
       <ContentUseState>
         <SubTitle color="#f6f6ff" margin="0 0 30px">
@@ -24,6 +26,7 @@ const Home = () => {
           width="80px"
           margin="30px 20px 0"
           background="#FFF"
+          hoverBackground="linear-gradient(135deg, #d9042b, #f2b705, #f28705, #f22f1d)"
           children={
             <Link to="/treinando-utilizacao-de-hooks/usestate">useState</Link>
           }

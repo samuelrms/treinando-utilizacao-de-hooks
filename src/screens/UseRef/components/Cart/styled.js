@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ContainerCart = styled.div`
-  background: #042940;
+  background: #270140;
   width: 90%;
   display: flex;
   flex-direction: column;

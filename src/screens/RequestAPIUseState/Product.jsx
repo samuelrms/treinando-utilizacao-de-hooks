@@ -1,11 +1,13 @@
 import React from "react";
+import Text from "../../components/Text/Text";
+import Title from "../../components/Title/Title";
 import { ProductContainer } from "./styled";
 
 const Product = ({ data }) => {
   return (
     <ProductContainer>
-      <h1>{data.nome}</h1>
-      <p>R$ {data.preco}</p>
+      <Title color="#fff">{data.nome}</Title>
+      <Text color="#fff">R$ {data.preco}</Text>
       <img src={data.fotos[0].src} alt={data.fotos[0].titulo} />
     </ProductContainer>
   );

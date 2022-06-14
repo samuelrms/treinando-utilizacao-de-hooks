@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from "react";
 import Button from "../../components/Button";
+import { Container } from "./styled";
 
 const slowOperation = () => {
   let slow;
@@ -30,14 +31,16 @@ const UseMemo = () => {
   console.log(performance.now() - getPerformance); // irá comparar os tempos em ms
 
   return (
-    <Button
-      onClick={() => setCount(count + 1)}
-      margin="30px"
-      width="100px"
-      height="40px"
-    >
-      UseMemo {count}
-    </Button>
+    <Container>
+      <Button
+        onClick={() => setCount(count + 1)}
+        margin="30px"
+        width="100px"
+        height="40px"
+      >
+        UseMemo {count}
+      </Button>
+    </Container>
   );
 };
 

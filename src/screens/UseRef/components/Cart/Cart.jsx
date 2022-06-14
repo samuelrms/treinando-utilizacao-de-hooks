@@ -16,7 +16,7 @@ const Cart = () => {
     timeoutRef.current = setTimeout(() => {
       // sempre chamar o current para essas situações
       setNotification(null);
-    }, 1500);
+    }, 2000);
   };
   return (
     <ContainerCart>
@@ -26,9 +26,10 @@ const Cart = () => {
         width="200px"
         height="40px"
         margin="30px auto 30px auto"
+        background="#F28705"
       />
       <Description color="#fdfdfd"> Total de itens {cart}</Description>
-      <Description>{notification}</Description>
+      <Description color="#fff">{notification}</Description>
     </ContainerCart>
   );
 };

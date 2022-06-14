@@ -2,6 +2,7 @@ import React, { useEffect, useId, useRef, useState } from "react";
 import Button from "../../components/Button";
 import Cart from "./components/Cart";
 import ListCards from "./components/ListCards";
+import { Container } from "./styled";
 
 const UseRef = () => {
   // const video = useRef();
@@ -15,11 +16,11 @@ const UseRef = () => {
   //----------------------------------------------
 
   return (
-    <div>
+    <Container>
       <ListCards />
       <hr />
       <Cart />
-    </div>
+    </Container>
   );
 };
 
