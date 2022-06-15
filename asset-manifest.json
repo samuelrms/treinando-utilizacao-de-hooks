@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/treinando-utilizacao-de-hooks/static/js/main.f0e1b721.js",
+    "main.js": "/treinando-utilizacao-de-hooks/static/js/main.1320a0fb.js",
     "index.html": "/treinando-utilizacao-de-hooks/index.html",
-    "main.f0e1b721.js.map": "/treinando-utilizacao-de-hooks/static/js/main.f0e1b721.js.map"
+    "main.1320a0fb.js.map": "/treinando-utilizacao-de-hooks/static/js/main.1320a0fb.js.map"
   },
   "entrypoints": [
-    "static/js/main.f0e1b721.js"
+    "static/js/main.1320a0fb.js"
   ]
 }
