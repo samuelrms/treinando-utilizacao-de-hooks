@@ -1,8 +1,9 @@
 import React from "react";
 import { colors } from "../../styles/colors";
 import Button from "../Button";
-import Description from "../Description/Description";
-import SubTitle from "../SubTitle/SubTitle";
+import Container from "../Container";
+import Description from "../Description";
+import SubTitle from "../SubTitle";
 import Title from "../Title/Title";
 
 export const ModalUseSate = ({
@@ -17,7 +18,7 @@ export const ModalUseSate = ({
   };
 
   return (
-    <div>
+    <Container>
       <Button
         width="50px"
         height="50px"
@@ -31,6 +32,6 @@ export const ModalUseSate = ({
       <Title color="#fff">{titleModal}</Title>
       <SubTitle color="#fff">{subTitle}</SubTitle>
       <Description color="#fff">{description}</Description>
-    </div>
+    </Container>
   );
 };
