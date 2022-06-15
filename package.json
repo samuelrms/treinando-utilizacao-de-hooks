@@ -16,8 +16,8 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "git-env-gh": "yarn add --dev gh-pages && ./node_modules/.bin/gh-pages -d build",
-    "git-env-repo": "yarn build && git push origin main",
+    "git-env-gh": "npm add --dev gh-pages && ./node_modules/.bin/gh-pages -d build",
+    "git-env-repo": "npm build && git push origin main",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
