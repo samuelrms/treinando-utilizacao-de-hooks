@@ -1,5 +1,4 @@
-import React, { useEffect, useId, useRef, useState } from "react";
-import Button from "../../components/Button";
+import React from "react";
 import Cart from "./components/Cart";
 import ListCards from "./components/ListCards";
 import { Container } from "./styled";

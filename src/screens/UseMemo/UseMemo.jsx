@@ -11,7 +11,7 @@ const UseMemo = () => {
 
   const slowOperation = () => {
     let slow;
-    for (let index = 0; index < 100000000; index++) {
+    for (let index = 0; index <= 100000000; index++) {
       slow = index + index / 10;
     }
     return slow;
@@ -58,6 +58,9 @@ const UseMemo = () => {
             />
           </>
         )}
+      </Content>
+      <Content>
+        <Button children={`UseMemo ${count}`} />
       </Content>
     </ContainerUseMemo>
   );
