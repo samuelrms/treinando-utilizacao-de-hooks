@@ -1,9 +1,6 @@
-import React, { useMemo, useState } from "react";
-import Button from "../../components/Button";
+import React from "react";
 import Content from "../../components/Content";
-import Description from "../../components/Description/Description";
 import Line from "../../components/Line/Line";
-import Text from "../../components/Text";
 import Title from "../../components/Title";
 import ExampleWithoutUseMemo from "./ExampleWithoutUseMemo";
 import ExampleWithUseMemo from "./ExampleWithUseMemo";
