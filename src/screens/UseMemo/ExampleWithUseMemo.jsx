@@ -1,9 +1,7 @@
 import React, { useMemo, useState } from "react";
 import Button from "../../components/Button";
-import Content from "../../components/Content";
 import Description from "../../components/Description/Description";
 import Text from "../../components/Text";
-import Title from "../../components/Title";
 
 const ExampleWithUseMemo = () => {
   const [count, setCount] = useState(0);
