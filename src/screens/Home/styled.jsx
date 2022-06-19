@@ -1,11 +1,11 @@
 import styled from "styled-components";
+import Container from "../../components/Container";
 
-export const ContainerHome = styled.div`
+export const ContainerHome = styled(Container)`
   width: 90%;
   height: 100vh;
   display: flex;
   align-items: center;
-  margin: 65px auto 30px;
   flex-direction: column;
   backdrop-filter: blur(15px);
   background: rgba(39, 1, 64, 0.57);

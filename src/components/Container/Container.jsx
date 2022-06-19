@@ -7,6 +7,7 @@ const Container = ({
   height,
   margin,
   background,
+  padding,
   ...restProps
 }) => {
   return (
@@ -15,6 +16,7 @@ const Container = ({
       width={width}
       margin={margin}
       background={background}
+      padding={padding}
       {...restProps}
     >
       {children}

@@ -1,7 +1,8 @@
 import React from "react";
+import { ContainerUseCallback } from "./styled";
 
 const UseCallback = () => {
-  return <div>UseCallback</div>;
+  return <ContainerUseCallback>UseCallback</ContainerUseCallback>;
 };
 
 export default UseCallback;
