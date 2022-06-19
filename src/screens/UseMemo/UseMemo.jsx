@@ -25,9 +25,6 @@ const UseMemo = () => {
         <Title color="#FFF" children="Exemplo sem useMemo" />
         <ExampleWithoutUseMemo />
       </Content>
-      <Content>
-        <Button children={`UseMemo ${count}`} />
-      </Content>
     </ContainerUseMemo>
   );
 };
