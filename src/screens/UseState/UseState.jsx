@@ -7,7 +7,11 @@ import SubTitle from "../../components/SubTitle/SubTitle";
 import Text from "../../components/Text/Text";
 import Title from "../../components/Title/Title";
 import { colors } from "../../styles/colors";
-import { Container, ContentButoonsAndValues, ContentContador } from "./styled";
+import {
+  ContainerUseState,
+  ContentButoonsAndValues,
+  ContentContador,
+} from "./styled";
 
 const UseState = () => {
   const [active, setActive] = useState(true);
@@ -81,7 +85,7 @@ const UseState = () => {
   };
 
   return (
-    <Container>
+    <ContainerUseState>
       <Title color="#fff">{textUseState.titulo.titulo}</Title>
       <hr />
       <div>
@@ -206,7 +210,7 @@ const UseState = () => {
           </div>
         </ContentButoonsAndValues>
       </ContentContador>
-    </Container>
+    </ContainerUseState>
   );
 };
 export default UseState;

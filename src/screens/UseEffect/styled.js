@@ -1,13 +1,14 @@
 import styled from "styled-components";
 import Button from "../../components/Button";
+import Container from "../../components/Container";
 
-export const ContainerUseEffect = styled.div`
+export const ContainerUseEffect = styled(Container)`
   height: 100%;
   width: 90%;
   background: grey;
   min-height: 600px;
   padding: 0 15px;
-  margin: 65px auto 30px;
+
   backdrop-filter: blur(15px);
   background: rgba(39, 1, 64, 0.57);
   border-radius: 10px;
