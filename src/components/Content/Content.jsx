@@ -7,6 +7,14 @@ const Content = ({
   height,
   margin,
   background,
+  display,
+  justifyContent,
+  alignItems,
+  alignContent,
+  flexDirection,
+  flexWrap,
+  maxWidth,
+  maxHeight,
   ...restProps
 }) => {
   return (
@@ -15,6 +23,14 @@ const Content = ({
       width={width}
       margin={margin}
       background={background}
+      display={display}
+      justifyContent={justifyContent}
+      alignItems={alignItems}
+      alignContent={alignContent}
+      flexDirection={flexDirection}
+      flexWrap={flexWrap}
+      maxHeight={maxHeight}
+      maxWidth={maxWidth}
       {...restProps}
     >
       {children}
