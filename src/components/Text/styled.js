@@ -4,4 +4,5 @@ export const TextDefault = styled.p`
   font-size: ${({ fontSize }) => fontSize};
   color: ${({ color }) => color};
   margin: ${({ margin }) => margin};
+  cursor: ${({ cursor }) => cursor};
 `;
