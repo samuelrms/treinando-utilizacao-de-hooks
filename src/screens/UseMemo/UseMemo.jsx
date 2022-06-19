@@ -16,7 +16,7 @@ const UseMemo = () => {
 
   return (
     <ContainerUseMemo>
-      <Content width="calc(100% / 2 - 70px)">
+      <Content width="calc(100%/2 - 70px)">
         <Title color="#FFF" children="Exemplo com useMemo" />
         <ExampleWithUseMemo />
       </Content>
