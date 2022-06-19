@@ -11,6 +11,7 @@ export const ModalUseSate = ({
   titleModal,
   subTitle,
   description,
+  width,
 }) => {
   const handleClick = () => {
     //Função de callback para handle click, ele sempre terá o valor anterior armazenado dentro
@@ -18,7 +19,7 @@ export const ModalUseSate = ({
   };
 
   return (
-    <Container>
+    <Container width={width}>
       <Button
         width="50px"
         height="50px"

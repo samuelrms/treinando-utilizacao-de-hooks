@@ -96,14 +96,13 @@ const ListCards = () => {
       </ContentInput>
       <ContentList>
         {comments.map((comment, index) => (
-          <ContentComment>
+          <ContentComment key={index}>
             <CardNumber>
               <Text color="#fff" children={`Card nº ${index + 1}`} />
             </CardNumber>
             <CardInfoAndDelete>
-              <Comment key={index}>{comment.value}</Comment>
+              <Comment>{comment.value}</Comment>
               <Button
-                key={index - 1}
                 onClick={() => handleClickClearComment(comment.index)}
                 children="🗑️"
                 height="40px"
