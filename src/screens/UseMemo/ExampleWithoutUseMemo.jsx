@@ -4,7 +4,7 @@ import Description from "../../components/Description/Description";
 import Text from "../../components/Text";
 
 const ExampleWithoutUseMemo = () => {
-  const [soma, setSoma] = useState(0);
+  const [count, setCount] = useState(0);
 
   const getPerformance = performance.now();
 
@@ -16,7 +16,7 @@ const ExampleWithoutUseMemo = () => {
       }
       return slow;
     };
-    return slowOperation(), setSoma(soma + 1);
+    return slowOperation(), setCount(count + 1);
   };
 
   console.log(performance.now() - getPerformance);
@@ -29,9 +29,9 @@ const ExampleWithoutUseMemo = () => {
         width="100px"
         height="40px"
       >
-        UseMemo {soma}
+        UseMemo {count}
       </Button>
-      {soma > 0 && (
+      {count > 0 && (
         <>
           <Description
             color="#FFF"
