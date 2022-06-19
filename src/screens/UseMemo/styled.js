@@ -9,4 +9,6 @@ export const ContainerUseMemo = styled(Container)`
   width: 90%;
   height: 100vh;
   padding: 30px;
+  display: flex;
+  justify-content: space-between;
 `;
