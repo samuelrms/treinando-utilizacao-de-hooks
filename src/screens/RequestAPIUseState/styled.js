@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import Container from "../../components/Container";
 
-export const RequestContainer = styled.div`
+export const RequestContainer = styled(Container)`
   background: grey;
   width: 90%;
   display: flex;
@@ -8,7 +9,7 @@ export const RequestContainer = styled.div`
   height: 650px;
   padding-top: 30px;
   align-items: center;
-  margin: 65px auto 30px;
+
   backdrop-filter: blur(15px);
   background: rgba(39, 1, 64, 0.57);
   border-radius: 10px;

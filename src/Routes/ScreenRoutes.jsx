@@ -6,6 +6,7 @@ import Constructor from "../screens/Constructor";
 import Error from "../screens/Error";
 import Home from "../screens/Home";
 import RequestAPIUseState from "../screens/RequestAPIUseState";
+import UseCallback from "../screens/UseCallback";
 import UseEffect from "../screens/UseEffect";
 import UseMemo from "../screens/UseMemo";
 import UseRef from "../screens/UseRef";
@@ -42,7 +43,7 @@ const ScreenRoutes = () => {
         />
         <Route
           path="/treinando-utilizacao-de-hooks/usecallback"
-          element={<Constructor />}
+          element={<UseCallback />}
         />
         <Route
           path="/treinando-utilizacao-de-hooks/useref"

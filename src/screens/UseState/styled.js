@@ -1,12 +1,13 @@
 import styled from "styled-components";
+import Container from "../../components/Container";
 
-export const Container = styled.div`
+export const ContainerUseState = styled(Container)`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: calc(90% - 40px);
   padding: 0 20px 20px;
-  margin: 65px auto 30px;
+
   backdrop-filter: blur(15px);
   background: rgba(39, 1, 64, 0.57);
   border-radius: 10px;
