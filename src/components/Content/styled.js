@@ -13,4 +13,6 @@ export const ContentDefault = styled.div`
   align-content: ${({ alignContent }) => alignContent};
   flex-direction: ${({ flexDirection }) => flexDirection};
   flex-wrap: ${({ flexWrap }) => flexWrap};
+  border: ${({ border }) => border};
+  border-radius: ${({ borderRadius }) => borderRadius};
 `;

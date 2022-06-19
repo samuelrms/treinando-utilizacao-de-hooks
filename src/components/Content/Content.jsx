@@ -15,10 +15,14 @@ const Content = ({
   flexWrap,
   maxWidth,
   maxHeight,
+  border,
+  borderRadius,
   ...restProps
 }) => {
   return (
     <ContentDefault
+      border={border}
+      borderRadius={borderRadius}
       height={height}
       width={width}
       margin={margin}

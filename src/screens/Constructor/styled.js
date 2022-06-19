@@ -11,16 +11,6 @@ export const ContainerContructor = styled(Container)`
   display: flex;
   align-items: center;
   justify-content: center;
-  div {
-    background-color: #000;
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
-    h1 {
-      color: #fff;
-      text-align: center;
-    }
-  }
 
   animation: renderConstructor 0.5s ease;
   @keyframes renderConstructor {

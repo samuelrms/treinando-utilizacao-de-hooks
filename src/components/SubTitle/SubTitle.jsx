@@ -2,19 +2,27 @@ import React from "react";
 import { SubTitleDefault } from "./styled";
 
 const SubTitle = ({
-  fontSize,
   children,
+  fontSize,
   color,
   margin,
+  cursor,
   padding,
+  background,
+  borderRadius,
+  border,
   ...restProps
 }) => {
   return (
     <SubTitleDefault
-      color={color}
       fontSize={fontSize}
       margin={margin}
+      color={color}
+      cursor={cursor}
       padding={padding}
+      background={background}
+      borderRadius={borderRadius}
+      border={border}
       {...restProps}
     >
       {children}
