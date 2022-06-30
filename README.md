@@ -24,3 +24,31 @@ Não modifique o estado diretamente. Utilize sempre a função de atualização 
 ---
 
 ## useRef
+
+### Estrutura base:
+
+  `useEffect(() => {
+    Função a ser executada
+  }, [dependência])`
+
+Todo componente possui um ciclo de vida. Os principais momentos acontecem quando o componente é renderizado, atualizado ou destruído. Com o React.useEffect() podemos definir um callback que irá ser executado durante certos momentos do ciclo de vida do componente.
+
+### Array de Dependências
+No useEffect podemos definir dois argumentos, o primeiro é a função de callback que será executada, o segundo é uma array com uma lista de dependências. A lista de dependências serve para informarmos quando o efeito deve ocorrer.
+
+Se utilizarmos o valor de um hook ou propriedade dentro de um efeito, ele irá indicar a necessidade de definirmos o mesmo como uma dependência na array.
+
+O useEffect será especialmente utilizado quando precisamos definir um efeito que deve ocorrer uma vez apenas, como o get de dados no servidor por exemplo.
+
+Podemos ter diversos useEffect no nosso código. O ideal é separarmos efeitos diferentes em useEffect diferentes.
+
+### As vezes precisamos executar um efeito sempre que um componente for desmontado. Para isso utilizamos um callback no retorno do callback do efeito. Com a seguinte sintaxe:
+
+  `useEffect(() => {
+    função
+    evento a ocorrer
+    
+    return () => {
+      callback da função
+    }
+  }, [dependência])`
