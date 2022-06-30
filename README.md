@@ -3,8 +3,20 @@
 ## https://samuelrms.github.io/treinando-utilizacao-de-hooks/
 
 ---
+<details>
 
-## useState
+  <summary>
+    
+   # useState
+  
+  </summary>
+
+### Estrutura base:
+
+```
+const [seuState, setSeuState] = useState(valor do seu state)
+```
+Utilizamos `set` como um padrão para boas práticas, porém, você pode utilizar o nome que quiser
 
 O useState é uma função que retorna uma Array com 2 valores. O primeiro valor guarda o dado do estado atual, pode ser qualquer tipo de dado como strings, arrays, números, boolean, null, undefined e objetos. O segundo valor é uma função que pode ser utilizada para modificarmos o estado do primeiro valor.
 
@@ -21,15 +33,25 @@ A definição do estado inicial também pode ser feita com um callback.
 ### Reatividade
 Não modifique o estado diretamente. Utilize sempre a função de atualização do estado, pois ela que garante a reatividade dos componentes. Sempre modifique o seu `setState` jamais o seu `state`
 
+</details>
+
 ---
 
-## useRef
+<details>
+
+  <summary>
+    
+   # useRef
+  
+  </summary>
 
 ### Estrutura base:
 
-  `useEffect(() => {
+```
+  useEffect(() => {
     Função a ser executada
-  }, [dependência])`
+  }, [dependência])
+```
 
 Todo componente possui um ciclo de vida. Os principais momentos acontecem quando o componente é renderizado, atualizado ou destruído. Com o React.useEffect() podemos definir um callback que irá ser executado durante certos momentos do ciclo de vida do componente.
 
@@ -44,11 +66,17 @@ Podemos ter diversos useEffect no nosso código. O ideal é separarmos efeitos d
 
 ### As vezes precisamos executar um efeito sempre que um componente for desmontado. Para isso utilizamos um callback no retorno do callback do efeito. Com a seguinte sintaxe:
 
-  `useEffect(() => {
+```
+useEffect(() => {
     função
     evento a ocorrer
     
     return () => {
       callback da função
     }
-  }, [dependência])`
+  }, [dependência])
+  ```
+  
+  </details>
+  
+  ---
