@@ -1,8 +1,7 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import Constructor from "../screens/Constructor";
 import Error from "../screens/Error";
 import Home from "../screens/Home";
 import RequestAPIUseState from "../screens/RequestAPIUseState";
@@ -50,7 +49,14 @@ const ScreenRoutes = () => {
           path="/treinando-utilizacao-de-hooks/useref"
           element={<UseRef />}
         />
-        <Route path="/treinando-utilizacao-de-hooks/*" element={<Error />} />
+        <Route
+          path="/treinando-utilizacao-de-hooks/error"
+          element={<Error />}
+        />
+        <Route
+          path="*"
+          element={<Navigate to={"/treinando-utilizacao-de-hooks/error"} />}
+        />
       </Routes>
       <Footer />
     </BrowserRouter>
