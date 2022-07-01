@@ -41,7 +41,7 @@ Não modifique o estado diretamente. Utilize sempre a função de atualização 
 
   <summary>
     
-   # useRef
+   # useEffect
   
   </summary>
 
