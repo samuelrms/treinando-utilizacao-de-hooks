@@ -112,3 +112,50 @@ O seu uso não é restrito a elementos do dom. Podemos utilizar também para gua
   </details>
 
 ---
+
+<details>
+
+<summary>
+
+# useMemo
+
+</summary>
+
+### Estrutura base com exemplo de função lenta:
+
+```
+const App = () => {
+  const [add, setAdd] = useState(0);
+  
+  const BIG_NUMBER = 10000000000;
+  const DIVISOR_BY_TEN = 10
+  const ZERO = 0
+  
+  function slowOperation() {
+  let slow;
+  for (let index = ZERO; index < BIG_NUMBER; index++) {
+    slow = index + index / DIVISOR_BY_TEN;
+  }
+  return slow;
+}
+  
+  const getTime = performance.now(); // performance.now() Pega o tempo atual onde sua aplicação está no momento
+  
+  const value = useMemo(() => //Utilizando o useMemo o valor dessa função será armazenado na memória
+  slowOperation(),[]);
+  
+  // const value = slowOperation(); // Dessa maneira o valor da função não será armazenado e ela precisará ser executada novamente
+  
+  console.log(performance.now() - getTime);
+
+  return <button onClick={() => setAdd(add + 1)}>{value}</button>;
+};
+```
+
+Memoriza um valor, evitando a recriação do mesmo todas as vezes em que um componente for atualizado. Recebe um callback e uma array de dependências. Assim como o useEffect.
+
+Ou seja, ele serve para casos em que você faz uma operação lenta, para retornar um valor e não ter que fazer a recriação do mesmo todas as vezes.
+
+</details>
+
+---
