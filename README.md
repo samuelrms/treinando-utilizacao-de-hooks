@@ -159,3 +159,35 @@ Ou seja, ele serve para casos em que você faz uma operação lenta, para retorn
 </details>
 
 ---
+
+<details>
+
+<summary>
+
+# useCallback
+
+</summary>
+
+### Estrutura base:
+
+```
+const memoizedCallback = useCallback(
+  () => {
+    suaFunção(a, b);
+  },
+  [a, b],
+);
+```
+
+`Retorna um callback memoizado.`
+
+Recebe como argumentos, um callback e um array. useCallback retornará uma versão memoizada do callback que só muda se uma das entradas tiverem sido alteradas. Isto é útil quando utilizamos callbacks a fim de otimizar componentes filhos, que dependem da igualdade de referência para evitar renderizações desnecessárias (como por exemplo shouldComponentUpdate).
+
+ou seja
+
+Permite definirmos um callback e uma lista de dependências do callback. Esse callback só será recriado se essa lista de dependências for modificada, caso contrário ele não irá recriar o callback.
+
+</details>
+
+---
+
