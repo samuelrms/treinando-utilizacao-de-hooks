@@ -7,7 +7,7 @@
 
   <summary>
     
-   # useState
+   # useState 🚀
   
   </summary>
 
@@ -41,7 +41,7 @@ Não modifique o estado diretamente. Utilize sempre a função de atualização 
 
   <summary>
     
-   # useEffect
+   # useEffect 🚀
   
   </summary>
 
@@ -85,7 +85,7 @@ useEffect(() => {
   
   <summary>
   
-  # useRef
+  # useRef 🚀
   
   </summary>
   
@@ -117,7 +117,7 @@ O seu uso não é restrito a elementos do dom. Podemos utilizar também para gua
 
 <summary>
 
-# useMemo
+# useMemo 🚀
 
 </summary>
 
@@ -164,7 +164,7 @@ Ou seja, ele serve para casos em que você faz uma operação lenta, para retorn
 
 <summary>
 
-# useCallback
+# useCallback 🚀
 
 </summary>
 
