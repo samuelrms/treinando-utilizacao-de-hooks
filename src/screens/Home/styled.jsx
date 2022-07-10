@@ -3,7 +3,7 @@ import Container from "../../components/Container";
 
 export const ContainerHome = styled(Container)`
   width: 90%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -21,7 +21,6 @@ export const ContainerHome = styled(Container)`
     width: 100%;
   }
   p {
-    margin: 0 20px;
     font-size: 20px;
   }
   hr {
@@ -46,9 +45,8 @@ export const ContentUseState = styled.div`
   padding: 30px;
   width: 90%;
   border-radius: 10px;
-  a {
-    padding: 10px 10px 10px 8px;
-    width: 100%;
-    margin: auto;
-  }
+`;
+
+export const ContentUseRef = styled(ContentUseState)`
+  margin: 30px 0;
 `;

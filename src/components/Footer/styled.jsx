@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Content from "../Content/Content";
 
 export const FooterContainer = styled.footer`
   background: #270140;
@@ -7,6 +8,7 @@ export const FooterContainer = styled.footer`
   text-align: center;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 
   @media (max-width: 768px) {
     width: 10%;
@@ -17,4 +19,11 @@ export const FooterContainer = styled.footer`
       padding: 0;
     }
   }
+`;
+
+export const ContentFooter = styled(Content)`
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 `;
