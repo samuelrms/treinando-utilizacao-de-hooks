@@ -7,7 +7,7 @@
 
   <summary>
     
-   # useState
+   # useState 🚀
   
   </summary>
 
@@ -41,7 +41,7 @@ Não modifique o estado diretamente. Utilize sempre a função de atualização 
 
   <summary>
     
-   # useEffect
+   # useEffect 🚀
   
   </summary>
 
@@ -80,3 +80,114 @@ useEffect(() => {
   </details>
   
   ---
+  
+  <details>
+  
+  <summary>
+  
+  # useRef 🚀
+  
+  </summary>
+  
+  ### Estrutura base:
+  
+  ```
+  const App = () => {
+  const section = useRef();
+
+  useEffect(() => {
+    console.log(section.current);
+  }, []);
+
+  return <section ref={section}></section>;
+};
+```
+
+Retorna um objeto com a propriedade current. Esse objeto pode ser utilizado para guardarmos valores que irão persistir durante todo o ciclo de vida do elemento. Geralmente usamos o mesmo para nos referirmos a um elemento do DOM, sem precisarmos utilizar o querySelector ou similar.
+
+É comum utilizarmos em formulários, quando precisamos de uma referência do elemento para colocarmos o mesmo em foco.
+
+O seu uso não é restrito a elementos do dom. Podemos utilizar também para guardarmos a referência de qualquer valor, como de um setTimeout por exemplo.
+  
+  </details>
+
+---
+
+<details>
+
+<summary>
+
+# useMemo 🚀
+
+</summary>
+
+### Estrutura base com exemplo de função lenta:
+
+```
+const App = () => {
+  const [add, setAdd] = useState(0);
+  
+  const BIG_NUMBER = 10000000000;
+  const DIVISOR_BY_TEN = 10
+  const ZERO = 0
+  
+  function slowOperation() {
+  let slow;
+  for (let index = ZERO; index < BIG_NUMBER; index++) {
+    slow = index + index / DIVISOR_BY_TEN;
+  }
+  return slow;
+}
+  
+  const getTime = performance.now(); // performance.now() Pega o tempo atual onde sua aplicação está no momento
+  
+  const value = useMemo(() => //Utilizando o useMemo o valor dessa função será armazenado na memória
+  slowOperation(),[]);
+  
+  // const value = slowOperation(); // Dessa maneira o valor da função não será armazenado e ela precisará ser executada novamente
+  
+  console.log(performance.now() - getTime);
+
+  return <button onClick={() => setAdd(add + 1)}>{value}</button>;
+};
+```
+
+Memoriza um valor, evitando a recriação do mesmo todas as vezes em que um componente for atualizado. Recebe um callback e uma array de dependências. Assim como o useEffect.
+
+Ou seja, ele serve para casos em que você faz uma operação lenta, para retornar um valor e não ter que fazer a recriação do mesmo todas as vezes.
+
+</details>
+
+---
+
+<details>
+
+<summary>
+
+# useCallback 🚀
+
+</summary>
+
+### Estrutura base:
+
+```
+const memoizedCallback = useCallback(
+  () => {
+    suaFunção(a, b);
+  },
+  [a, b],
+);
+```
+
+`Retorna um callback memoizado.`
+
+Recebe como argumentos, um callback e um array. useCallback retornará uma versão memoizada do callback que só muda se uma das entradas tiverem sido alteradas. Isto é útil quando utilizamos callbacks a fim de otimizar componentes filhos, que dependem da igualdade de referência para evitar renderizações desnecessárias (como por exemplo shouldComponentUpdate).
+
+ou seja
+
+Permite definirmos um callback e uma lista de dependências do callback. Esse callback só será recriado se essa lista de dependências for modificada, caso contrário ele não irá recriar o callback.
+
+</details>
+
+---
+
