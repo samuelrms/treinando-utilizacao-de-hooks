@@ -19,44 +19,17 @@ const ScreenRoutes = () => {
       <GlobalStyle />
       <Header />
       <Routes>
-        <Route path="/treinando-utilizacao-de-hooks" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/" element={<Home />} />
-        <Route
-          path="/treinando-utilizacao-de-hooks/usestate"
-          element={<UseState />}
-        />
-        <Route
-          path="/treinando-utilizacao-de-hooks/requestapiusestate"
-          element={<RequestAPIUseState />}
-        />
-        <Route
-          path="/treinando-utilizacao-de-hooks/useeffect"
-          element={<UseEffect />}
-        />
-        <Route
-          path="/treinando-utilizacao-de-hooks/usememo"
-          element={<UseMemo />}
-        />
-        <Route
-          path="/treinando-utilizacao-de-hooks/usecontext"
-          element={<UseContext />}
-        />
-        <Route
-          path="/treinando-utilizacao-de-hooks/usecallback"
-          element={<UseCallback />}
-        />
-        <Route
-          path="/treinando-utilizacao-de-hooks/useref"
-          element={<UseRef />}
-        />
-        <Route
-          path="/treinando-utilizacao-de-hooks/error"
-          element={<Error />}
-        />
-        <Route
-          path="*"
-          element={<Navigate to={"/treinando-utilizacao-de-hooks/error"} />}
-        />
+        <Route path="/useState" element={<UseState />} />
+        <Route path="/requestAPIuseState" element={<RequestAPIUseState />} />
+        <Route path="/useEffect" element={<UseEffect />} />
+        <Route path="/useMemo" element={<UseMemo />} />
+        <Route path="/useContext" element={<UseContext />} />
+        <Route path="/useCallback" element={<UseCallback />} />
+        <Route path="/useRef" element={<UseRef />} />
+        <Route path="/404-not-found" element={<Error />} />
+        <Route path="*" element={<Navigate to={"/404-not-found"} />} />
       </Routes>
       <Footer />
     </BrowserRouter>
