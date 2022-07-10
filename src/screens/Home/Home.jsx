@@ -4,7 +4,7 @@ import SubTitle from "../../components/SubTitle";
 import Button from "../../components/Button";
 import Title from "../../components/Title";
 import Text from "../../components/Text";
-import { textHome } from "../../components/mooks/text";
+import { textHome } from "../../components/mocks/text";
 import { ContainerHome, ContentUseState } from "./styled";
 
 const Home = () => {

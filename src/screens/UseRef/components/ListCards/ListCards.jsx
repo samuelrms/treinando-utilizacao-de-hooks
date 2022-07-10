@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import Button from "../../../../components/Button";
-import { textUseRef } from "../../../../components/mooks/text";
+import { textUseRef } from "../../../../components/mocks/text";
 import SubTitle from "../../../../components/SubTitle";
 import Text from "../../../../components/Text";
 import Title from "../../../../components/Title";
@@ -21,15 +21,27 @@ const ListCards = () => {
   const [input, setInput] = useState("");
   const inputElement = useRef();
 
-  const handleClickAddComments = () => {
-    const mountComments = {
-      value: input,
-      index: Math.random(),
-    }; // montando o comentario cada um com seu respectivo index
-    setComments([...comments, mountComments]);
-    setInput("");
-    inputElement.current.focus();
-  };
+  const handleKeyDownListCards = useCallback(
+    (e) => {
+      if (e.key === "Enter") {
+        if (e.currentTarget.value.trim().length === 0) return;
+        const getDataInput = e.currentTarget.value;
+        e.currentTarget.value = "";
+
+        const mountComments = {
+          value: input,
+          index: Math.random(),
+        }; // montando o comentário cada um com seu respectivo index
+        setComments((oldList) => {
+          if (oldList.includes(getDataInput)) return oldList;
+          return [...comments, mountComments];
+        });
+        setInput("");
+        inputElement.current.focus();
+      }
+    },
+    [comments, input],
+  );
 
   useEffect(() => {
     const commentsToString = JSON.stringify(comments);
@@ -49,13 +61,6 @@ const ListCards = () => {
     );
     window.localStorage.clear();
     setComments(contentCardClear);
-  };
-
-  const onKeyDownCommets = (event) => {
-    event.key === "Enter" &&
-      input !== "" &&
-      input !== " " &&
-      handleClickAddComments();
   };
 
   return (
@@ -80,11 +85,11 @@ const ListCards = () => {
           ref={inputElement}
           type="text"
           value={input}
-          onKeyDown={(event) => onKeyDownCommets(event)}
+          onKeyDown={handleKeyDownListCards}
           onChange={({ target }) => setInput(target.value)} // defina o input como o value dele
         />
         <Button
-          onClick={handleClickAddComments}
+          onClick={handleKeyDownListCards}
           children="Submit"
           width="10%"
           height="60px"

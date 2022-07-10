@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Button from "../../components/Button";
 import Description from "../../components/Description/Description";
 import { ModalUseSate } from "../../components/Modal";
-import { textUseState } from "../../components/mooks/text";
+import { textUseState } from "../../components/mocks/text";
 import SubTitle from "../../components/SubTitle/SubTitle";
 import Text from "../../components/Text/Text";
 import Title from "../../components/Title/Title";
