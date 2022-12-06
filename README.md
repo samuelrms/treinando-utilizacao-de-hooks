@@ -1,6 +1,6 @@
 # Treinando utilizacao de hooks
 ## Projeto criado para estudos de React Hooks
-## https://deepening-knowledge-in-hooks.herokuapp.com/
+## https://samuelrms.github.io/home
 
 ---
 <details>
