@@ -1,6 +1,27 @@
 # Treinando utilizacao de hooks
 ## Projeto criado para estudos de React Hooks
-## https://samuelrms.github.io/home
+### https://samuelrms.github.io/home
+
+## Rodando o projeto
+```
+npm i
+```
+**Para instalar as dependências do projeto.**
+
+<br>
+
+
+```
+npm start
+```
+**Para rodar o projeto em modo de desenvolvimento.**
+
+<br>
+
+```
+npm build
+```
+**Para fazer o build do projeto para produção.**
 
 ---
 <details>
