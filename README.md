@@ -8,15 +8,10 @@ npm i
 ```
 **Para instalar as dependências do projeto.**
 
-<br>
-
-
 ```
 npm start
 ```
 **Para rodar o projeto em modo de desenvolvimento.**
-
-<br>
 
 ```
 npm build
@@ -24,14 +19,9 @@ npm build
 **Para fazer o build do projeto para produção.**
 
 ---
-<details>
 
-  <summary>
-    
    # useState 🚀
   
-  </summary>
-
 ### Estrutura base:
 
 ```
@@ -54,18 +44,10 @@ A definição do estado inicial também pode ser feita com um callback.
 ### Reatividade
 Não modifique o estado diretamente. Utilize sempre a função de atualização do estado, pois ela que garante a reatividade dos componentes. Sempre modifique o seu `setState` jamais o seu `state`
 
-</details>
-
 ---
-
-<details>
-
-  <summary>
     
    # useEffect 🚀
   
-  </summary>
-
 ### Estrutura base:
 
 ```
@@ -98,17 +80,9 @@ useEffect(() => {
   }, [dependência])
   ```
   
-  </details>
-  
   ---
   
-  <details>
-  
-  <summary>
-  
   # useRef 🚀
-  
-  </summary>
   
   ### Estrutura base:
   
@@ -130,17 +104,9 @@ Retorna um objeto com a propriedade current. Esse objeto pode ser utilizado para
 
 O seu uso não é restrito a elementos do dom. Podemos utilizar também para guardarmos a referência de qualquer valor, como de um setTimeout por exemplo.
   
-  </details>
-
 ---
 
-<details>
-
-<summary>
-
 # useMemo 🚀
-
-</summary>
 
 ### Estrutura base com exemplo de função lenta:
 
@@ -177,17 +143,9 @@ Memoriza um valor, evitando a recriação do mesmo todas as vezes em que um comp
 
 Ou seja, ele serve para casos em que você faz uma operação lenta, para retornar um valor e não ter que fazer a recriação do mesmo todas as vezes.
 
-</details>
-
 ---
 
-<details>
-
-<summary>
-
 # useCallback 🚀
-
-</summary>
 
 ### Estrutura base:
 
@@ -207,8 +165,6 @@ Recebe como argumentos, um callback e um array. useCallback retornará uma vers�
 ou seja
 
 Permite definirmos um callback e uma lista de dependências do callback. Esse callback só será recriado se essa lista de dependências for modificada, caso contrário ele não irá recriar o callback.
-
-</details>
 
 ---
 
